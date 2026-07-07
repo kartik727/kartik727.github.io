@@ -1,31 +1,26 @@
 source "https://rubygems.org"
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+# This site runs on Jekyll 4 and is deployed via GitHub Actions
+# (see .github/workflows/deploy.yml), so it no longer depends on the
+# github-pages gem / legacy branch builder. Run locally with:
 #
-#     bundle exec jekyll serve
+#     bundle install
+#     bundle exec jekyll serve --livereload
 #
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
+gem "jekyll", "~> 4.3"
 
-gem "github-pages", group: :jekyll_plugins
-
-# If you want to use Jekyll native, uncomment the line below.
-# To upgrade, run `bundle update`.
-
-# gem "jekyll"
-
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
-
-# If you have any plugins, put them here!
+# Plugins
 group :jekyll_plugins do
-  # gem "jekyll-archives"
   gem "jekyll-feed"
-  gem 'jekyll-sitemap'
-  gem 'hawkins'
+  gem "jekyll-sitemap"
+  gem "jekyll-gist"
+  gem "jekyll-redirect-from"
+  gem "jemoji"
 end
 
-# Blank Target
-gem "jekyll-target-blank"
+# Windows and JRuby do not include zoneinfo files, so bundle the tzinfo-data gem
+# and associated library.
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "wdm", "~> 0.1.0", platforms: [:mingw, :mswin, :x64_mingw]
+
 gem "webrick", "~> 1.8"
