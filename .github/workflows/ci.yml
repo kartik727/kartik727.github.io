@@ -1,0 +1,47 @@
+name: CI
+
+# GitHub Pages builds this site with the legacy Jekyll builder, which only
+# runs *after* a push to master and reports failures by email. This workflow
+# validates the build on every pull request (and on master) so broken builds,
+# links, or images are caught before they ship.
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+# Cancel superseded runs on the same branch/PR.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build & validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+          # Lets jekyll-github-metadata read repo info without warnings.
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bundle exec jekyll build
+
+      - name: Install HTMLProofer
+        run: gem install html-proofer -v "~> 5.0"
+
+      - name: Validate HTML (internal links & images)
+        run: |
+          htmlproofer ./_site \
+            --disable-external \
+            --allow-hash-href \
+            --ignore-empty-alt \
+            --no-enforce-https \
+            --ignore-urls '/^mailto:/'
