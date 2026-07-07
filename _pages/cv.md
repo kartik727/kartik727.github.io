@@ -111,14 +111,6 @@ Research grant by Voxomos Systems. Trained an LSTM recurrent neural network base
 
 ---
 
-## Teaching
-
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-
----
-
 ## Leadership and Awards
 
 * Highest annual performance feedback rating (95<sup>th</sup> percentile) for 3 years in a row, Reliance Jio, *2020-22*
