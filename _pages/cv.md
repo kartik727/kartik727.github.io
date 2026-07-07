@@ -28,7 +28,7 @@ Working on the Feed team for the Nextdoor app.
 
 Worked on designing and optimizing the TikTok app search suggestions feature, and served as its primary point of contact.
 
-* Implemented a search candidate raking method using a BCE+LTR hybrid loss function to improve search relevance and reduce latency for the US and EU markets.
+* Implemented a search candidate ranking method using a BCE+LTR hybrid loss function to improve search relevance and reduce latency for the US and EU markets.
 * Implemented a search query scattering strategy to increase diversity in search results for queries with unclear search intent.
 * Collaborated with the architecture team to increase the number of query candidates by 8x with minimal latency impact, improving search coverage and increasing suggestions click-through rate.
 
@@ -48,7 +48,7 @@ Used machine learning and Bayesian statistics to gain actionable insights into c
 
 * Deployed a distributed model with Apache Spark and MS Azure to perform churn prediction for 400M+ daily customers.
 * Curated over 1100 features for churn prediction to improve customer retention resulting in $35M/mo in additional revenue.
-* Collaborated with vendors to launch A/B testing of ad campaigns on geographic cohorts and created a Tableau dashborad.
+* Collaborated with vendors to launch A/B testing of ad campaigns on geographic cohorts and created a Tableau dashboard.
 * Reduced data pre-processing time by 70% during ETL by implementing a multiprocessing pipeline for feature extraction.
 
 ---
