@@ -20,5 +20,5 @@ I love hiking, skiing, reading fantasy novels, and cooking. I also enjoy connect
 
 <div style="display: flex; gap: 20px;">
     <a href="{{ site.resume_pdf }}">View Resume</a>
-    <a class="libutton" href="http://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=kartikc727" target="_black">Follow on LinkedIn</a>
+    <a class="libutton" href="http://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=kartikc727" target="_blank">Follow on LinkedIn</a>
 </div>

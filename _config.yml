@@ -19,9 +19,7 @@ future                   : false
 read_more                : "disabled"                                   # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false                                        #change to true to add link to talkmap on talks page
 comments:
-  provider: "disqus"
-  disqus:
-    shortname: "kartik727"
+  provider: false
 atom_feed:
   path                   :                                              # blank (default) uses feed.xml
 
@@ -45,7 +43,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
 
@@ -53,7 +51,7 @@ analytics:
 # Site Author
 author:
   # Biographic information
-  avatar           : "/assets/images/profile_pic_large.jpg"
+  avatar           : "assets/images/profile_pic_large.jpg"
   name             : "Kartik Choudhary"
   pronouns         : "He/Him"
   bio              : > # MD allowed
@@ -164,31 +162,13 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  about-me:
     output: true
     permalink: /:collection/:path/
 
 
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      comments: true
-      share: true
-      related: true
-
   # _pages
   - scope:
       path: ""
@@ -196,39 +176,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-    # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-
-  # _drafts
-  - scope:
-      path: ""
-      type: drafts
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      comments: true
-      share: true
-      related: true
-      show_date: true
-
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
 
     # _publications
   - scope:
@@ -238,7 +185,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
+      comments: false
 
 
 # Sass/SCSS
@@ -256,14 +203,12 @@ timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database
 
 # Plugins
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -282,12 +227,6 @@ resume_pdf: "/files/resume/resume_20241215.pdf"
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
