@@ -22,7 +22,7 @@ not be used to draw conclusions that guide medical practice.
 
 Accepted at the [Reinforcement Learning Conference](https://rl-conference.cc/), 2024.
 
-[Paper](https://arxiv.org/abs/2406.05646){:target="_blank" rel="noopener noreferrer"} \|
+[Paper](https://rlj.cs.umass.edu/2024/papers/RLJ_RLC_2024_194.pdf){:target="_blank" rel="noopener noreferrer"} \|
 [Code](https://github.com/icu-sepsis/icu-sepsis){:target="_blank" rel="noopener noreferrer"}
 
 
@@ -30,13 +30,13 @@ Cite as:
 
 {% raw %}
 ```bibtex
-@inproceedings{
-  choudhary2024icusepsis,
-  title={{ICU-Sepsis}: A Benchmark {MDP} Built from Real Medical Data},
-  author={Kartik Choudhary and Dhawal Gupta and Philip S. Thomas},
-  booktitle={Reinforcement Learning Conference},
-  year={2024},
-  url={https://arxiv.org/abs/2406.05646}
+@article{choudhary2024sepsis,
+    title={{ICU-Sepsis}: {A} Benchmark {MDP} Built from Real Medical Data},
+    author={Choudhary, Kartik and Gupta, Dhawal and Thomas, Philip S.},
+    journal={Reinforcement Learning Journal},
+    volume={4},
+    pages={1546--1566},
+    year={2024}
 }
 ```
 {% endraw %}

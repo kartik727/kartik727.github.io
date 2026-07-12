@@ -1,10 +1,10 @@
 ---
 title: "Judging the Judges: Evaluating Alignment and Vulnerabilities in LLMs-as-Judges"
 collection: publications
-permalink: /publication/2024-05-20-judging-judges
+permalink: /publication/2025-07-01-judging-judges
 excerpt: 'A comprehensive study of the LLM-as-a-judge paradigm in a controlled setup that reveals new results about its strengths and weaknesses.'
-date: 2024-05-20
-venue: 'arXiv'
+date: 2025-07-01
+venue: 'Workshop on Generation, Evaluation and Metrics (GEM²)'
 ---
 
 {% include figure image_path="images/assets/publications/judging-judges/judge-score-alignment.png"
@@ -26,20 +26,30 @@ which have up to 34 points lower human alignment. Through error analysis and var
 effects of instruction length and leniency bias, we hope to provide valuable lessons for using LLMs as judges in
 the future.
 
-[Paper](https://arxiv.org/abs/2406.12624){:target="_blank" rel="noopener noreferrer"} \|
+Accepted at the [Workshop on Generation, Evaluation and Metrics (GEM²)](https://aclanthology.org/volumes/2025.gem-1/), 2025.
+
+[Paper](https://aclanthology.org/2025.gem-1.33.pdf){:target="_blank" rel="noopener noreferrer"} \|
 [Code](https://github.com/judging-judges/judging-judges){:target="_blank" rel="noopener noreferrer"}
 
 Cite as:
 
 {% raw %}
 ```bibtex
-@misc{thakur2024judging,
-  title={Judging the Judges: Evaluating Alignment and Vulnerabilities in LLMs-as-Judges}, 
-  author={Aman Singh Thakur and Kartik Choudhary and Venkat Srinik Ramayapally and Sankaran Vaidyanathan and Dieuwke Hupkes},
-  year={2024},
-  eprint={2406.12624},  
-  archivePrefix={arXiv},
-  url={https://arxiv.org/abs/2406.12624}
+@inproceedings{thakur-etal-2025-judging,
+    title = "Judging the Judges: Evaluating Alignment and Vulnerabilities in {LLM}s-as-Judges",
+    author = "Thakur, Aman Singh  and
+      Choudhary, Kartik  and
+      Ramayapally, Venkat Srinik  and
+      Vaidyanathan, Sankaran  and
+      Hupkes, Dieuwke",
+    booktitle = "Proceedings of the Fourth Workshop on Generation, Evaluation and Metrics (GEM{\texttwosuperior})",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria and virtual meeting",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.gem-1.33/",
+    pages = "404--430",
+    ISBN = "979-8-89176-261-9"
 }
 ```
 {% endraw %}
