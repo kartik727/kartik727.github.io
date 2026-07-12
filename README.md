@@ -1,7 +1,6 @@
 # kartikc727.github.io
 
-Source for my personal website, [kartikc.com](https://kartikc.com) — an about page,
-resume, publications, and teaching history.
+Source for my personal website, [kartikc.com](https://kartikc.com).
 
 ## Stack
 
@@ -14,16 +13,20 @@ theme (© Michael Rose, MIT License — see `LICENSE`).
 
 - `_config.yml` — site-wide configuration.
 - `_data/navigation.yml` — top navigation bar.
-- `_pages/` — standalone pages (about, CV, publications, teaching).
-- `_publications/`, `_teaching/` — content collections.
+- `_pages/` — standalone pages (about, CV, publications).
+- `_publications/`, — content collections.
 - `_layouts/`, `_includes/`, `_sass/` — theme templates and styles.
 - `assets/`, `images/`, `files/` — CSS/JS, images, and downloadable files (e.g. resume).
 
 ## Running locally
 
-Requires Ruby with Bundler.
+Requires Ruby 3.3 with Bundler. This project uses `chruby` and `.ruby-version`
+for local Ruby selection; avoid Apple's system Ruby (currently Ruby 2.6).
 
 ```bash
+ruby-install ruby 3.3.11
+cd /path/to/kartik727.github.io
+gem install bundler
 bundle install
 bundle exec jekyll serve
 ```
