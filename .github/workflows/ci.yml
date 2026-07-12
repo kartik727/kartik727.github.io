@@ -1,8 +1,8 @@
 name: CI
 
 # Validates the build on every pull request so broken builds, links, or
-# images are caught before merge. Pushes to master are built and validated
-# by the deploy workflow (deploy.yml), so master isn't duplicated here.
+# images are caught before merge. Pushes to main are built and validated
+# by the deploy workflow (deploy.yml), so main isn't duplicated here.
 
 on:
   pull_request:
